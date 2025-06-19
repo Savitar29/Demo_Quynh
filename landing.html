@@ -199,6 +199,15 @@
         .slide-active { transform: translateX(0); opacity: 1; z-index: 3; }
         .slide-out-left { transform: translateX(-100%); opacity: 0; z-index: 1; }
         .slide-out-right { transform: translateX(100%); opacity: 0; z-index: 1; }
+
+        /* Thêm quy tắc này để áp dụng max-width cho tất cả div trừ div đầu tiên */
+        body > div:not(:first-of-type),
+        body > section,
+        body > footer {
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 
@@ -389,7 +398,7 @@
                                     Lợi thế</h3>
                                 <p class="text-[#FF7A1B] text-lg leading-relaxed pt-2 text-left">
                                     giúp sinh viên Truyền thông<br />
-                                    Đa phương tiện PTIT tự tin<br />
+                                    Đa phương tiệm PTIT tự tin<br />
                                     trong thời kỳ chuyển đổi số.
                                 </p>
                             </div>
@@ -613,7 +622,7 @@
     <section class="gradient-bg py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-white text-4xl font-bold mb-6">GẶP GỠ NHỮNG "CHIẾN BINH" NỔI BẬT CỦA NGÀNH</h2>
+                <h2 class="text-white text-5xl font-extrabold mb-4 drop-shadow-lg">GẶP GỠ NHỮNG "CHIẾN BINH" NỔI BẬT CỦA NGÀNH</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
@@ -874,7 +883,7 @@
                 <div>
                     <h3 class="text-white font-bold text-lg mb-4">Chương trình đào tạo</h3>
                     <div class="space-y-2 text-orange-100 text-base">
-                        <p>Cử nhân Truyền thông đa phương tiện</p>
+                        <p>Cử nhân Truyền thông đa phương tiệm</p>
                         <p>Thạc sĩ Digital Marketing</p>
                         <p>Khóa học ngắn hạn</p>
                     </div>
@@ -906,7 +915,7 @@
                 </div>
             </div>
             <div class="border-t border-orange-600 mt-8 pt-8 text-center">
-                <p class="text-orange-100 text-base">&copy; 2024 Truyền thông Đa phương tiện PTIT. Tất cả quyền được bảo
+                <p class="text-orange-100 text-base">&copy; 2024 Truyền thông Đa phương tiệm PTIT. Tất cả quyền được bảo
                     lưu.</p>
             </div>
         </div>
@@ -921,7 +930,7 @@
                 group: 'Nhóm sinh viên: Nhữ Khánh Duy, Hồng Ngọc,... – Khóa D20',
                 subject: 'Môn học: Quản lý dự án truyền thông',
                 score: 'Điểm: <span class="font-bold">10/10</span>',
-                desc: 'Với sức mạnh của Truyền thông Đa phương tiện, sinh viên hôm nay không chỉ học, mà còn kiến tạo tương lai. Đừng ngại thử thách, hãy sáng tạo không ngừng để biến ước mơ thành hiện thực và lan tỏa thông điệp của chính mình.'
+                desc: 'Với sức mạnh của Truyền thông Đa phương tiệm, sinh viên hôm nay không chỉ học, mà còn kiến tạo tương lai. Đừng ngại thử thách, hãy sáng tạo không ngừng để biến ước mơ thành hiện thực và lan tỏa thông điệp của chính mình.'
             },
             {
                 video: '1124.mp4',
