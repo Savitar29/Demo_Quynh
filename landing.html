@@ -174,9 +174,11 @@
             opacity: 1;
             transition: opacity 0.4s;
         }
+
         .course-fade-out {
             opacity: 0;
         }
+
         .course-fade-in {
             opacity: 1;
         }
@@ -187,18 +189,186 @@
             min-height: 320px;
             overflow: hidden;
         }
+
         .course-slide-anim {
             position: absolute;
-            left: 0; top: 0; width: 100%; height: 100%;
-            transition: transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s cubic-bezier(.4, 0, .2, 1), opacity 0.3s;
             opacity: 1;
             z-index: 1;
         }
-        .slide-in-right { transform: translateX(100%); opacity: 0; z-index: 2; }
-        .slide-in-left { transform: translateX(-100%); opacity: 0; z-index: 2; }
-        .slide-active { transform: translateX(0); opacity: 1; z-index: 3; }
-        .slide-out-left { transform: translateX(-100%); opacity: 0; z-index: 1; }
-        .slide-out-right { transform: translateX(100%); opacity: 0; z-index: 1; }
+
+        .slide-in-right {
+            transform: translateX(100%);
+            opacity: 0;
+            z-index: 2;
+        }
+
+        .slide-in-left {
+            transform: translateX(-100%);
+            opacity: 0;
+            z-index: 2;
+        }
+
+        .slide-active {
+            transform: translateX(0);
+            opacity: 1;
+            z-index: 3;
+        }
+
+        .slide-out-left {
+            transform: translateX(-100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .slide-out-right {
+            transform: translateX(100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+
+        @media (min-width: 1400px) and (max-width: 1600px) {
+            .container {
+                max-width: 1500px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            /* Hero section */
+            .lg\:w-3\/4 {
+                width: 65% !important;
+            }
+
+            .lg\:w-1\/4 {
+                width: 35% !important;
+            }
+
+            .max-w-\[500px\] {
+                max-width: 462px !important;
+            }
+
+            #content_tq {
+                margin: 0px 20px !important;
+            }
+
+            .backdrop-blur-sm.rounded-t-3xl.flex.items-center {
+                padding: 40px 60px 0px 60px !important;
+            }
+
+            .w-full.backdrop-blur-sm.rounded-t-3xl.flex.items-center {
+                padding: 0px !important;
+            }
+
+            /* Card grid */
+            .grid-cols-1.md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .font-extrabold.italic.text-4xl.mx-8 {
+                font-size: 2rem !important;
+                line-height: 2rem;
+            }
+
+            #hocchat {
+                margin-left: 2% !important;
+            }
+
+            .text-white.text-4xl.font-extrabold.mb-4 {
+                font-size: 1.6rem;
+            }
+            .text-white.text-lg.mb-2,
+            .text-white.text-xl.font-semibold.mb-2,
+            .text-white.text-lg.leading-relaxed.font-base {
+                font-size: 1rem;
+            }
+
+            /* Course slide */
+            .course-slide-wrap {
+                min-height: 380px;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .w-\[622px\] {
+                width: 520px !important;
+            }
+
+            .h-\[350px\] {
+                height: 290px !important;
+            }
+
+            .w-\[533px\] {
+                width: 420px !important;
+            }
+
+            .h-\[300px\] {
+                height: 240px !important;
+            }
+
+            .w-\[320px\] {
+                width: 260px !important;
+            }
+
+            .h-\[180px\] {
+                height: 140px !important;
+            }
+
+            /* Club video slide */
+            #club-slide {
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Text size */
+            h1,
+            h2,
+            h3 {
+                font-size: 1.08em;
+            }
+
+            .text-4xl {
+                font-size: 2.2rem !important;
+            }
+
+            .text-5xl {
+                font-size: 2.7rem !important;
+            }
+
+            .text-6xl {
+                font-size: 3.2rem !important;
+            }
+
+            /* Footer */
+            footer .container {
+                max-width: 1400px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            /* Các section padding */
+            section,
+            .gradient-bg,
+            .bg-gradient-to-b {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Tránh tràn lề */
+            body {
+                overflow-x: hidden;
+            }
+
+            #profile {
+                margin-bottom: 100px;
+            }
+        }
     </style>
 </head>
 
@@ -255,19 +425,16 @@
                 <!-- Cột trái: Text -->
                 <div class="lg:w-3/4 w-full text-left">
                     <h1
-                        class="text-orange-600 font-extrabold text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight drop-shadow-lg">
+                        class="text-orange-600 font-extrabold text-4xl md:text-5xl lg:text-6xl mb-12 leading-tight drop-shadow-lg truyenthong">
                         TRUYỀN THÔNG ĐA PHƯƠNG TIỆN
                     </h1>
-                    <h2 class="font-extrabold text-5xl md:text-5xl lg:text-5xl mb-8 leading-tight drop-shadow-lg uppercase"
-                        style="color: transparent; -webkit-text-stroke: 1px #ff6600; text-stroke: 1px #ff6600;">HỌC VIỆN
-                        CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG</h2>
                     <h2
-                        class="text-orange-500 font-medium text-2xl md:text-3xl lg:text-4xl mb-8 leading-tight drop-shadow-lg">
+                        class="text-orange-500 font-medium text-2xl md:text-3xl lg:text-4xl mb-12 leading-tight drop-shadow-lg">
                         Học chất – Làm sành – Truyền cảm hứng!
                     </h2>
-                    <p class="text-orange-500 text-lg md:text-xl font-medium mb-8 max-w-4xl leading-relaxed drop-shadow"
+                    <p class="text-orange-500 text-lg md:text-xl font-medium mb-12 max-w-4xl leading-relaxed drop-shadow"
                         style="font-style: italic;">
-                        Nơi hội tụ đam mê sáng tạo, môi trường học tập hiện đại, thực chiến và đầy cảm hứng.
+                        Nơi hội tụ đam mê sáng tạo, môi trường học tập hiện đại, thực chiến <br/> và đầy cảm hứng
                     </p>
                     <button
                         class="hero-button-gradient font-extrabold text-xl px-8 py-3 rounded-full shadow-lg flex items-center group">
@@ -282,7 +449,7 @@
                 </div>
                 <!-- Cột phải: Ảnh -->
                 <div class="lg:w-1/4 w-full flex justify-center lg:justify-end lg:mt-0 pl-8 h-full items-end">
-                    <img src="profile.png" alt="" class="w-auto max-w-[500px]" style="display: block;">
+                    <img id="profile" src="profile.png" alt="" class="w-auto max-w-[500px]" style="display: block;">
                 </div>
             </div>
         </section>
@@ -290,7 +457,8 @@
 
     <!-- After Hero Section-->
     <section class="py-10" style="background: linear-gradient(to bottom, #FFD6AB, #FFD2A3);">
-        <div class="container mx-auto px-6" >
+        <div class="container mx-auto"
+            style="padding-left: 2%; padding-right: 2%; padding-top: 1rem; padding-bottom: 1rem;">
             <div class="bg-white/30 backdrop-blur-sm rounded-t-3xl flex items-center"
                 style="padding: 40px 80px 0px 80px">
                 <div class="bg-white/50 w-full backdrop-blur-sm rounded-t-3xl flex items-center"
@@ -300,7 +468,8 @@
                         <h1
                             class="text-[#FF4C00] font-medium text-4xl md:text-5xl lg:text-5xl mb-8 leading-tight drop-shadow-lg">
                             TỔNG QUAN</h1>
-                        <p class="text-[#FF4C00] text-lg md:text-2xl mb-8 max-w-4xl leading-relaxed mx-auto">
+                        <p class="text-[#FF4C00] text-lg md:text-2xl mb-8 max-w-4xl leading-relaxed mx-auto"
+                            id="content_tq">
                             Truyền thông đa phương tiện - Học viện Công nghệ Bưu chính Viễn thông (PTIT) thuộc <span
                                 class="font-bold italic">top 3 lĩnh vực trọng điểm</span> được Bộ Giáo dục và Đào tạo
                             chọn để phát triển mô hình đào tạo xuất sắc và tài năng về công nghệ 4.0. PTIT cũng là
@@ -311,9 +480,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Stats Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-4 mt-12 px-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-4 mt-12" style="padding-left: 5%; padding-right: 5%;">
                 <!-- Card 1 - Chương trình đào tạo -->
                 <div class="bg-white rounded-3xl p-6 text-center card-hover"
                     style="color: #FF7F00; box-shadow: 0 0 20px #ebba70, 0 0 20px #ffe2b7 inset;">
@@ -364,11 +533,11 @@
     <!-- Stats Section -->
     <section class="py-12"
         style="background: radial-gradient(circle at center, #FFF5ED 0%, #FFD7B4 52%, #FFC888 100%);  position: relative;">
-        <span 
-            style="position: absolute; top: 50%; transform: translateY(-50%) rotate(-180deg); font-size: 7rem; color: #FF7F00; filter: drop-shadow(0 0 8px #F6FF00); padding: 20px 0px;; font-weight: bold; letter-spacing: 0.05em; writing-mode: vertical-rl; z-index: 10; font-family: 'Inter', Inter, sans-serif; line-height: 1.5; white-space: nowrap;"
-            class="ml-12 text-gradient-to-b from-[#FF8020] to-[#FF8000] text-transparent"> HỌC CHẤT
+        <span
+            style="position: absolute; top: 50%; transform: translateY(-50%) rotate(-180deg); font-size: 6rem; color: #FF7F00; filter: drop-shadow(0 0 8px #F6FF00); padding: 20px 0px;; font-weight: bold; letter-spacing: 0.2em; writing-mode: vertical-rl; z-index: 10; font-family: 'Inter', Inter, sans-serif; line-height: 1.5; white-space: nowrap;"
+            class="ml-12 text-gradient-to-b from-[#FF8020] to-[#FF8000] text-transparent" id="hocchat"> HỌC CHẤT
         </span>
-        <div class="container mx-auto px-24">
+        <div class="container mx-auto" style="padding-left: 6%; padding-right: 6%;">
             <!-- Gen Z Quote Section -->
             <div class="bg-white rounded-3xl p-6 text-center card-hover"
                 style="color: #FF7F00; box-shadow: 0 0 20px #ebba70, 0 0 20px #ffe2b7 inset;">
@@ -389,7 +558,7 @@
                                     Lợi thế</h3>
                                 <p class="text-[#FF7A1B] text-lg leading-relaxed pt-2 text-left">
                                     giúp sinh viên Truyền thông<br />
-                                    Đa phương tiện PTIT tự tin<br />
+                                    Đa phương tiệm PTIT tự tin<br />
                                     trong thời kỳ chuyển đổi số.
                                 </p>
                             </div>
@@ -430,9 +599,10 @@
                         <h3 class="font-bold text-2xl mb-3">Cơ sở vật chất hiện đại và môi trường học tập chất lượng
                         </h3>
                         <div class="text-base">
-                            <p>• Studio chuyên nghiệp về hệ thống thiết bị tác nghiệp video: máy quay, máy ảnh, phòng
+                            <p>• Studio với hệ thống thiết bị khủng: Máy quay, máy ảnh, phông xanh, hệ thống ánh sáng
+                                chuyên nghiệp,...
                                 xanh, hệ thống âm thanh xử lý...</p>
-                            <p>• Phòng thu âm đạt chuẩn podcasts, lồng tiếng, sản xuất âm nhạc chất lượng cao.</p>
+                            <p>• Phòng thu âm đạt chuẩn: lồng tiếng, sản xuất podcast chất lượng cao.</p>
                         </div>
                     </div>
                     <div class="ml-auto">
@@ -473,9 +643,9 @@
                             04</h1>
                     </div>
                     <div class="text-[#FF7F00]">
-                        <h3 class="font-bold text-2xl mb-3">Cộng đồng sinh viên năng động, sôi nổi</h3>
-                        <p class="text-base">• Tham gia các câu lạc bộ học thuật, sở hoàn thiện kỹ năng,
-                            xây dựng mạng lưới quan hệ với anh chị cử trước, các chuyên gia trong ngành.</p>
+                        <h3 class="font-bold text-2xl mb-3"> Chương trình học bổng hấp dẫn</h3>
+                        <p class="text-base">• Học bổng đầu vào trị giá lên tới 500 triệu đồng, cùng các học bổng khuyến
+                            khích học tập mỗi kỳ và học bổng kết nối doanh nghiệp.</p>
                     </div>
                     <div class="ml-auto">
                         <div class="rounded-xl flex items-center justify-center mx-auto">
@@ -531,7 +701,9 @@
     <div class="w-full border-t border-b borde-white bg-gradient-to-b from-[#FF6600] to-[#FF9500]">
         <div class="flex justify-center overflow-x-auto whitespace-nowrap p-2 relative"
             style="background: linear-gradient(180deg, #FF8000 0%, #FF5900 100%);">
-            <div style="position:absolute; inset:0; background-image:url(texture.png); opacity: 0.2; pointer-events:none;"></div>
+            <div
+                style="position:absolute; inset:0; background-image:url(texture.png); opacity: 0.2; pointer-events:none;">
+            </div>
             <span class="font-extrabold italic text-4xl mx-8"
                 style="color: #F6FF00; filter: drop-shadow(0 0 8px #F6FF00); padding: 20px 0px;">LÀM SÀNH</span>
             <span class="text-3xl mx-4"
@@ -558,24 +730,30 @@
         <div class="container mx-auto">
             <div class="text-center mb-8">
                 <h2 class="text-white text-5xl font-extrabold mb-4 drop-shadow-lg">THỰC CHIẾN THÔNG QUA CÁC MÔN HỌC</h2>
-                <p class="text-white/90 font-bold italic text-xl mb-4">Tại PTIT, portfolio của bạn được tạo nên từ những sản phẩm, dự án, cọ xát thực tế.</p>
+                <p class="text-white font-semibold italic text-xl mb-4" style="padding-left: 6%; padding-right: 6%;">Tại
+                    PTIT, portfolio của bạn được tạo nên từ những sản phẩm, dự án, cọ xát thực tế.</p>
             </div>
             <div class="flex items-center justify-between border-1 gap-8">
                 <!-- Nút trái -->
-                <button id="course-prev" class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <button id="course-prev"
+                    class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                        viewBox="0 0 24 24">
                         <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
                 <!-- Nội dung động -->
-                <div class="flex-1 course-slide-wrap" style="min-height:320px;">
-                    <div id="course-slide" class="flex items-center justify-center gap-12 rounded-3xl course-slide-anim slide-active">
+                <div class="flex-1 course-slide-wrap" style="min-height:350px;">
+                    <div id="course-slide"
+                        class="flex items-center justify-center gap-12 rounded-3xl course-slide-anim slide-active">
                         <!-- Nội dung sẽ được render bằng JS -->
                     </div>
                 </div>
                 <!-- Nút phải -->
-                <button id="course-next" class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <button id="course-next"
+                    class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                        viewBox="0 0 24 24">
                         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
@@ -587,7 +765,9 @@
     <div class="w-full border-t border-b borde-white bg-gradient-to-b from-[#FF6600] to-[#FF9500]">
         <div class="flex justify-center overflow-x-auto whitespace-nowrap p-2 relative"
             style="background: linear-gradient(180deg, #FF8000 0%, #FF5900 100%);">
-            <div style="position:absolute; inset:0; background-image:url(texture_2.png); opacity: 0.2; pointer-events:none;"></div>
+            <div
+                style="position:absolute; inset:0; background-image:url(texture_2.png); opacity: 0.2; pointer-events:none;">
+            </div>
             <span class="font-extrabold italic text-4xl mx-8"
                 style="color: #F6FF00; filter: drop-shadow(0 0 8px #F6FF00); padding: 20px 0px;">LÀM SÀNH</span>
             <span class="text-3xl mx-4"
@@ -609,11 +789,50 @@
         </div>
     </div>
 
+    <!--CLUB VIDEO-->
+    <section class="bg-gradient-to-b from-[#FF7F00] to-[#FFC082] py-16 relative">
+        <div class="container mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-white text-5xl font-extrabold mb-4 drop-shadow-lg">THỰC CHIẾN TRONG CÁC DỰ ÁN CÂU LẠC BỘ
+                </h2>
+                <p class="text-white font-semibold italic text-xl mb-4" style="padding-left: 6%; padding-right: 6%;">Các
+                    câu lạc bộ dành riêng cho sinh viên Truyền thông đa phương tiện: PTV - Kênh sinh viên Truyền thông
+                    đa phương tiệm PTIT, Câu lạc bộ Truyền thông Podcast PTIT,... giúp sinh viên có cơ hội sản xuất các
+                    sản phẩm thực tế, trau dồi kiến thức và kỹ năng chuyên môn dưới sự hướng dẫn của các giảng viên.</p>
+            </div>
+            <div class="flex items-center justify-between border-1 gap-8">
+                <!-- Nút trái -->
+                <button id="club-prev"
+                    class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                        viewBox="0 0 24 24">
+                        <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- Slide video -->
+                <div id="club-slide" class="flex items-center justify-center gap-8 flex-1">
+
+                </div>
+                <!-- Nút phải -->
+                <button id="club-next"
+                    class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                        viewBox="0 0 24 24">
+                        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Testimonials Section -->
     <section class="gradient-bg py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-white text-5xl font-extrabold mb-4 drop-shadow-lg">GẶP GỠ NHỮNG "CHIẾN BINH" NỔI BẬT CỦA NGÀNH</h2>
+                <h2 class="text-white text-5xl font-extrabold mb-4 drop-shadow-lg">GẶP GỠ NHỮNG "CHIẾN BINH" NỔI BẬT CỦA
+                    NGÀNH</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
@@ -629,7 +848,7 @@
                         <div class="text-base text-white/80 mb-2">INTERN TẠI SAIGON GLOBAL</div>
                         <div class="text-base text-white/80">SOFTWARE TECHNOLOGY VIỆT NAM</div>
                     </div>
-                    <p class="text-white/90 text-base leading-relaxed italic">
+                    <p class="text-white text-base leading-relaxed italic">
                         "PTIT không chỉ dạy lý thuyết mà còn rèn luyện cách suy nghĩ và hành động như một người làm
                         truyền thông thực thụ"
                     </p>
@@ -647,7 +866,7 @@
                         <div class="text-base text-white/80 mb-2">INTERN TẠI SAIGON GLOBAL</div>
                         <div class="text-base text-white/80">SOFTWARE TECHNOLOGY VIỆT NAM</div>
                     </div>
-                    <p class="text-white/90 text-base leading-relaxed italic">
+                    <p class="text-white text-base leading-relaxed italic">
                         "PTIT không chỉ dạy lý thuyết mà còn rèn luyện cách suy nghĩ và hành động như một người làm
                         truyền thông thực thụ"
                     </p>
@@ -665,7 +884,7 @@
                         <div class="text-base text-white/80 mb-2">INTERN TẠI SAIGON GLOBAL</div>
                         <div class="text-base text-white/80">SOFTWARE TECHNOLOGY VIỆT NAM</div>
                     </div>
-                    <p class="text-white/90 text-base leading-relaxed italic">
+                    <p class="text-white text-base leading-relaxed italic">
                         "PTIT không chỉ dạy lý thuyết mà còn rèn luyện cách suy nghĩ và hành động như một người làm
                         truyền thông thực thụ"
                     </p>
@@ -679,7 +898,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
                 <h2 class="text-white text-4xl font-bold mb-6">NƠI THÀNH CÔNG KHÔNG CHỈ CÓ DEADLINE</h2>
-                <p class="text-white/90 text-lg">Hòa mình vào không khí sôi động của các sự kiện truyền thông, cuộc thi
+                <p class="text-white text-lg">Hòa mình vào không khí sôi động của các sự kiện truyền thông, cuộc thi
                     học thuật, workshop chuyên ngành và hàng loạt CLB năng động.</p>
             </div>
 
@@ -767,7 +986,7 @@
                 <!-- Career items positioned randomly -->
                 <div class="career-item absolute top-8 left-12">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Content Creator</span>
                     </div>
                 </div>
@@ -781,70 +1000,70 @@
 
                 <div class="career-item absolute top-32 left-1/4">
                     <div
-                        class="bg-white/25 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">UX/UI Designer</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute top-12 left-1/2 transform -translate-x-1/2">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Digital Marketing</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute top-40 right-1/4">
                     <div
-                        class="bg-white/25 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Influencer</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute bottom-32 left-8">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class="backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Graphic Designer</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute bottom-24 left-1/3">
                     <div
-                        class="bg-white/25 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Motion Graphics</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute bottom-36 right-12">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Video Editor</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute bottom-12 left-1/2 transform -translate-x-1/2">
                     <div
-                        class="bg-white/25 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Social Media Manager</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute top-56 left-20">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Creative Director</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute bottom-20 right-1/3">
                     <div
-                        class="bg-white/25 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/35 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Art Director</span>
                     </div>
                 </div>
 
                 <div class="career-item absolute top-64 right-24">
                     <div
-                        class="bg-white/20 backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
+                        class=" backdrop-blur-sm rounded-2xl px-6 py-3 hover:bg-white/30 transition-all duration-300 cursor-pointer">
                         <span class="text-white text-lg font-semibold">Brand Manager</span>
                     </div>
                 </div>
@@ -916,28 +1135,32 @@
         // Dữ liệu các slide
         const courseSlides = [
             {
-                video: 'beiu.mp4',
+                video: 'vid_course_1.mp4',
                 title: 'Video ngắn "Speak Up"',
-                group: 'Nhóm sinh viên: Nhữ Khánh Duy, Hồng Ngọc,... – Khóa D20',
+                group: 'Nhóm sinh viên: Khóa D20',
                 subject: 'Môn học: Quản lý dự án truyền thông',
-                score: 'Điểm: <span class="font-bold">10/10</span>',
                 desc: 'Với sức mạnh của Truyền thông Đa phương tiện, sinh viên hôm nay không chỉ học, mà còn kiến tạo tương lai. Đừng ngại thử thách, hãy sáng tạo không ngừng để biến ước mơ thành hiện thực và lan tỏa thông điệp của chính mình.'
             },
             {
-                video: '1124.mp4',
-                title: 'Video ngắn "Highlight Valorant by Savitar"',
-                group: 'Nhóm sinh viên: Nguyễn Thanh An',
-                subject: 'Môn học: Chơi gem hihi',
-                score: 'Điểm: <span class="font-bold">1000/10</span>',
-                desc: 'Một sản phẩm sáng tạo thể hiện tinh thần làm việc nhóm và khả năng ứng dụng công nghệ vào nghệ thuật.'
+                video: 'vid_course_2.mp4',
+                title: 'Video ngắn "Tôi sẽ là ai khi chọn truyền thông đa phương tiện PTIT"',
+                group: 'Nhóm sinh viên: Khóa D21',
+                subject: 'Môn học: Kịch bản đa phương tiện',
+                desc: 'Bước vào một hành trình mới, bạn mong muốn mình sẽ trở thành ai? Với chương trình đào tạo chất lượng, giàu thực tiễn và đội ngũ giảng viên giàu kinh nghiệm, Truyền thông đa phương tiện PTIT chính là nơi ươm mầm những giấc mơ sáng tạo.'
             },
             {
-                video: '1122.mp4',
-                title: 'Video ngắn "Highlight Valorant by Savitar"',
-                group: 'Nhóm sinh viên: Nguyễn Thanh An',
-                subject: 'Môn học: Chơi gem hihi',
-                score: 'Điểm: <span class="font-bold">1000/10</span>',
-                desc: 'Một sản phẩm sáng tạo thể hiện tinh thần làm việc nhóm và khả năng ứng dụng công nghệ vào nghệ thuật.'
+                video: 'vid_course_3.mp4',
+                title: 'Dự án "Ngày đọng trên giấy"',
+                group: 'Nhóm sinh viên: Khóa D21',
+                subject: 'Môn học: Ứng dụng đồ hoạ đa phương tiện',
+                desc: 'Dự án "Ngày đọng trên giấy" ra đời với mong muốn tăng cường nhận thức và truyền tải đến mọi người, đặc biệt là các bạn trẻ những thông điệp ý nghĩa về yêu bản thân. Khi bạn sống một cách trọn vẹn, những giá trị, kỷ niệm, những niềm hạnh phúc ấy sẽ mãi "đọng" lại trong ký ức, trong cuộc đời này.'
+            },
+            {
+                video: 'vid_course_4.mp4',
+                title: 'Dự án "Những cánh chim đêm không mỏi"',
+                group: 'Nhóm sinh viên: Khóa D21',
+                subject: 'Môn học: Ứng dụng sản xuất Audio & Video',
+                desc: 'Khi thành phố đã ngủ yên, ở chợ Long Biên vẫn có những con người lặng thầm miệt mài mưu sinh – những người phụ nữ cửu vạn mang trong mình sức mạnh phi thường của sự bền bỉ. Sản phẩm là lời tri ân, là góc nhìn nhân văn về vẻ đẹp lao động – mộc mạc nhưng xúc động.'
             }
             // Thêm các slide khác nếu muốn
         ];
@@ -958,7 +1181,7 @@
             // Nội dung
             const data = courseSlides[idx];
             newSlide.innerHTML = `
-                <div class='flex-shrink-0 w-[533px] h-[300px] flex items-center justify-center bg-black rounded-2xl'>
+                <div class='flex-shrink-0 w-[622px] h-[350px] flex items-center justify-center bg-black rounded-2xl'>
                     <video controls class='w-full h-full object-contain rounded-2xl'>
                         <source src='${data.video}' type='video/mp4'>
                         Trình duyệt của bạn không hỗ trợ video.
@@ -966,14 +1189,12 @@
                 </div>
                 <div class='text-left max-w-xl'>
                     <h3 class='text-white text-4xl font-extrabold mb-4'>${data.title}</h3>
-                    <div class='text-white/90 text-xl font-semibold mb-2'>${data.group}</div>
-                    <div class='text-white/90 text-lg mb-2'>${data.subject}</div>
-                    <div class='text-white/90 text-lg mb-4'>${data.score}</div>
-                    <p class='text-white text-lg leading-relaxed font-medium'>${data.desc}</p>
+                    <div class='text-white text-xl font-semibold mb-2'>${data.group}</div>
+                    <div class='text-white text-lg mb-2'>${data.subject}</div>
+                    <p class='text-white text-lg leading-relaxed font-base'>${data.desc}</p>
                 </div>
             `;
             wrap.appendChild(newSlide);
-            // Kích hoạt hiệu ứng
             setTimeout(() => {
                 if (direction === 1) {
                     newSlide.classList.remove('slide-in-right');
@@ -991,18 +1212,53 @@
                 isSliding = false;
             }, 500);
         }
-        document.getElementById('course-prev').onclick = function() {
+        document.getElementById('course-prev').onclick = function () {
             const prev = (currentCourse - 1 + courseSlides.length) % courseSlides.length;
             renderCourseSlide(prev, -1);
             currentCourse = prev;
         };
-        document.getElementById('course-next').onclick = function() {
+        document.getElementById('course-next').onclick = function () {
             const next = (currentCourse + 1) % courseSlides.length;
             renderCourseSlide(next, 1);
             currentCourse = next;
         };
         // Hiển thị slide đầu tiên khi load trang
         window.addEventListener('DOMContentLoaded', () => renderCourseSlide(currentCourse, 0));
+
+        // Club video slide chỉ hiển thị 3 video (dù mảng có nhiều phần tử)
+        const clubVideos = [
+            { src: 'vid_club_1.mp4', poster: 'thumbnail.png' },
+            { src: 'vid_club_2.mp4', poster: 'thumbnail.png' },
+            { src: 'vid_club_3.mp4', poster: 'thumbnail.png' },
+            { src: 'vid_club_4.mp4', poster: 'thumbnail.png' },
+            { src: 'vid_club_5.mp4', poster: 'thumbnail.png' }
+        ];
+        let clubCurrent = 0;
+        function renderClubSlide(idx) {
+            const total = clubVideos.length;
+            const prev = (idx - 1 + total) % total;
+            const next = (idx + 1) % total;
+            document.getElementById('club-slide').innerHTML = `
+                <div class="w-[320px] h-[180px] opacity-60 scale-90 bg-white/80 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300">
+                    <video src="${clubVideos[prev].src}" poster="${clubVideos[prev].poster}" class="w-full h-full object-contain rounded-2xl pointer-events-none" tabindex="-1"></video>
+                </div>
+                <div class="w-[533px] h-[300px] bg-white rounded-2xl shadow-2xl border border-orange-200 flex items-center justify-center transition-all duration-300">
+                    <video src="${clubVideos[idx].src}" poster="${clubVideos[idx].poster}" controls class="w-full h-full object-contain rounded-2xl"></video>
+                </div>
+                <div class="w-[320px] h-[180px] opacity-60 scale-90 bg-white/80 rounded-2xl shadow-lg flex items-center justify-center transition-all duration-300">
+                    <video src="${clubVideos[next].src}" poster="${clubVideos[next].poster}" class="w-full h-full object-contain rounded-2xl pointer-events-none" tabindex="-1"></video>
+                </div>
+            `;
+        }
+        document.getElementById('club-prev').onclick = function () {
+            clubCurrent = (clubCurrent - 1 + clubVideos.length) % clubVideos.length;
+            renderClubSlide(clubCurrent);
+        };
+        document.getElementById('club-next').onclick = function () {
+            clubCurrent = (clubCurrent + 1) % clubVideos.length;
+            renderClubSlide(clubCurrent);
+        };
+        window.addEventListener('DOMContentLoaded', () => renderClubSlide(clubCurrent));
     </script>
 </body>
 
